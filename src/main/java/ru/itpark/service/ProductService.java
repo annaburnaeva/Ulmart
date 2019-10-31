@@ -4,6 +4,7 @@ import ru.itpark.model.Product;
 
 import java.util.*;
 
+
 public class ProductService {
     private final Collection<Product> items = new LinkedList<>();
 
@@ -27,7 +28,7 @@ public class ProductService {
             }
         }
         Collections.sort(listByName);
-        return listByName.subList(0, 9);
+        return listByName;
     }
 
     public List<Product> searchByCategory(String category) {
@@ -38,7 +39,15 @@ public class ProductService {
             }
         }
         Collections.sort(listByCategory);
-        return listByCategory.subList(0, 9);
+        return listByCategory;
     }
+
+
+    public List<Product> pageList(List<Product> list, int firstIndex, int lastIndex) {
+        List<Product> pageList = list.subList(firstIndex, lastIndex);
+        return pageList;
+    }
+
 }
+
 

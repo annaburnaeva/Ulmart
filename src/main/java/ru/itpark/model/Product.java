@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
+
 public class Product implements Comparable<Product>  {
     private long id;
     private int rating;
