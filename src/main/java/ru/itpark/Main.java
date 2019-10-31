@@ -19,10 +19,10 @@ public class Main {
 
         List<Product> results1 = service.searchByName("Ботинки");
         System.out.println(results1);
-        List<Product> results3 = service.searchByCategory("Обувь");
-        System.out.println(results3);
+        List<Product> results2 = service.searchByCategory("Обувь");
+        System.out.println(results2);
 
-        System.out.println(service.pageList(results3, 0, 2));
+        System.out.println(service.pageList(results2, 0, 2));
 
 
     }
